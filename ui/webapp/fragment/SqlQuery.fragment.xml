@@ -1,0 +1,7 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Popover title="Search Query Overview">
+        <VBox fitContainer="true" class="sapUiSmallMargin customSqlText">
+            <Text text="{/sSqlQuery}" wrapping="true"/>
+        </VBox>
+    </Popover>
+</core:FragmentDefinition>

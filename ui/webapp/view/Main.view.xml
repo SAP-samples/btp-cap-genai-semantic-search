@@ -1,0 +1,84 @@
+<mvc:View
+	controllerName="com.sap.search.engine.controller.Main"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	core:require="{
+		formatter: 'com/sap/search/engine/model/formatter'
+	}">
+
+	<Page id="page">
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Image src="src/sap_logo.png" height="2rem" densityAware="false" decorative="false"/>
+				</contentLeft>
+				<contentMiddle>
+					<Title text="{i18n>pageTitle}" level="H1"/>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<content>
+			<VBox class="sapUiMediumMargin" fitContainer="true" justifyContent="{= ${/searchResults}.length > 0 ? 'Start' : 'Center'}" alignItems="{= ${/searchResults}.length > 0 ? 'Start' : 'Center'}" height="70%">
+				<VBox visible="{= ${/searchResults}.length === 0}">
+					<Image src="src/sap_logo.png" width="25rem" densityAware="false" decorative="false"/>
+					<SearchField placeholder="{i18n>searchBarPlaceholder}" value="{/sQuery}" search="onSearch" width="25rem"/>
+					<HBox id="searchIndicator" visible="{= ${/isSearching}}" justifyContent="Center" alignItems="Center">
+						<BusyIndicator size="2rem" text="{i18n>searchIndicatorLabel}"/>
+					</HBox>
+				</VBox>
+				<VBox visible="{= ${/searchResults}.length > 0}">
+					<HBox justifyContent="Start" fitContainer="true">
+						<VBox width="100%">
+							<SearchField id="searchField" placeholder="{i18n>searchBarReformulation}" value="{/sReformulationQuery}" search="onExtraSearchStringChange"/>
+						</VBox>
+						<Button class="sapUiTinyMarginBegin" text="{i18n>resetSearchBtn}" press="onResetSearch"/>
+					</HBox>
+					<MessageStrip showIcon="true" customIcon="sap-icon://search" class="sapUiSmallMarginTop" text="{= ${/sQuery}}" type="Success" visible="{= ${/sQuery} !== '' }"/>
+					<Table 
+						id="searchResultsTable"
+						class="sapUiSmallMarginTop"
+						items="{path: '/searchResults'}">
+					<headerToolbar>
+						<Toolbar>
+							<content>
+								<Title text="{= ${i18n>tableTitle}.replace('{0}', ${/searchResults}.length) }"/>
+								<Button icon="sap-icon://message-information" press="onShowPopover"/>
+							</content>
+						</Toolbar>
+					</headerToolbar>
+						<columns>
+							<Column>
+								<Text text="{i18n>documentTitle}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>documentText}"/>
+							</Column>
+							<Column hAlign="End">
+								<Text text="{i18n>dateOfPublication}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>language}"/>
+							</Column>
+							<Column hAlign="End">
+								<Text text="{i18n>documentSimilarity}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="{document/title}"/>
+									<Text text="{document/text}"/>
+									<Text text="{document/date}"/>
+									<Text text="{document/language}"/>
+									<Text text="{similarity}" textAlign="Right"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</VBox>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

@@ -1,0 +1,21 @@
+specVersion: "3.0"
+metadata:
+  name: com.sap.search.engine
+type: application
+framework:
+  name: SAPUI5
+  version: "1.121.2"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: themelib_sap_horizon
+builder:
+  customTasks:
+    - name: ui5-tooling-transpile-task
+      afterTask: replaceVersion
+server:
+  customMiddleware:
+    - name: ui5-tooling-transpile-middleware
+      afterMiddleware: compression
+    - name: ui5-middleware-livereload
+      afterMiddleware: compression

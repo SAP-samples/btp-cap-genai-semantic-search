@@ -1,0 +1,15 @@
+specVersion: "3.0"
+metadata:
+  name: com.sap.search.engine
+type: application
+resources:
+  configuration:
+    paths:
+      webapp: dist
+framework:
+  name: SAPUI5
+  version: "1.121.2"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: themelib_sap_horizon
