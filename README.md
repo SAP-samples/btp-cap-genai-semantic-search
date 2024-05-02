@@ -1,33 +1,24 @@
-# SAP-samples/repository-template
-This default template for SAP Samples repositories includes files for README, LICENSE, and .reuse/dep5. All repositories on github.com/SAP-samples will be created based on this template.
-
-# Containing Files
-
-1. The LICENSE file:
-In most cases, the license for SAP sample projects is `Apache 2.0`.
-
-2. The .reuse/dep5 file: 
-The [Reuse Tool](https://reuse.software/) must be used for your samples project. You can find the .reuse/dep5 in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
-
-3. The README.md file (this file):
-Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
-
-# [Title]
-<!-- Please include descriptive title -->
+# CAP Application: Semantic Search Integrated with Generative AI Hub and SAP HANA Cloud's Vector Engine
+Basic sample for semantic search engine on SAP Business Technology Platform
 
 <!--- Register repository https://api.reuse.software/register, then add REUSE badge:
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
 -->
 
 ## Description
-<!-- Please include SEO-friendly description -->
+Basic sample for semantic search engine as CAP (Cloud Application Programming Model) application integrating generative AI hub and SAP HANA Cloud’s Vector Engine on SAP BTP, offering scalable and powerful search capabilities.
+
+The application follows a modular structure, with the backend logic located in the 'api' folder and the frontend components in the 'ui' folder. Explore the 'api' folder for backend logic, including data models, service definitions, and business logic implementation. The 'ui' folder contains the frontend components, such as views, controllers and assets for the web interface, developed using TypeScript and SAPUI5 (SAP's web framework for building enterprise-ready web applications).
+
+Follow the provided instructions in the 'Download and Installation' section to configure and install the application for deployment and development on SAP BTP.
 
 ## Requirements
+* Cloud Foundry Subaccount [Create a Subaccount](https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/create-subaccount)
+* Access to generative AI hub (SAP AI Core with service plan extended)
+* Access to SAP HANA Cloud Vector Engine (QRC 1/2024 or later)
 
 ## Download and Installation
-
-## Known Issues
-<!-- You may simply state "No known issues. -->
+Follow the configuration and installation steps provided in the 'Prepare for Deployment, Deployment and Development' section:  [Similarity Search Application](https://github.com/SAP-samples/btp-cap-genai-rag/tree/cap-genaihub-vectorengine-sample)
 
 ## How to obtain support
 [Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository if you find a bug or have questions about the content.
