@@ -2,7 +2,7 @@
 
 <!-- disco-toc-start -->
 
-- [Requirements](https://github.com/btp-cap-genai-semantic-search/blob/main/docs/tutorial/1-Requirements.md)
+- [Requirements](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/1-Requirements.md)
   
 - Setup
 
