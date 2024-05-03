@@ -1,5 +1,5 @@
 {
-    "xsappname": "genaihub-vectorengine-sample",
+    "xsappname": "genai-semantic-search-sample",
     "tenant-mode": "dedicated",
     "description": "Security profile of called application",
     "scopes": [

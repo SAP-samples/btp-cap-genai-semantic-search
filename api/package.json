@@ -1,5 +1,5 @@
 {
-    "name": "genaihub-vectorengine-sample",
+    "name": "genai-semantic-search-sample",
     "version": "1.0.0",
     "description": "CAP sample with Generative AI Hub & SAP HANA Cloud Vector Engine",
     "repository": "https://github.com/SAP-samples/btp-cap-genai-rag",
