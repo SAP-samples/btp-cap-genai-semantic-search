@@ -14,12 +14,7 @@ The application follows a modular structure, with the backend logic located in t
 Follow the provided instructions in the 'Download and Installation' section to configure and install the application for deployment and development on SAP BTP.
 
 ## Getting Started
-1. Requirements
-
-## Requirements
-* Cloud Foundry Subaccount [Create a Subaccount](https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/create-subaccount)
-* Access to generative AI hub (SAP AI Core with service plan extended)
-* Access to SAP HANA Cloud Vector Engine (QRC 1/2024 or later)
+1. [Requirements](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/1-Requirements.md)
 
 ## Configuration and Installation
 
