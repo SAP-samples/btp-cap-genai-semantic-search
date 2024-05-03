@@ -44,7 +44,7 @@ resources:
 The project includes a UI component. Follow the instruccions mentioned in the "if UI is attached" section of the previously referenced repository for configuration and installation. Once configured, the UI is set to be deployed locally. After running `npm run watch`, check the port number where the application router is listening. Replace the port in the URL with this port number to access and test the application locally.
 
 ## How to obtain support
-[Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository if you find a bug or have questions about the content.
+[Create an issue](https://github.com/SAP-samples/btp-cap-genai-semantic-search/issues) in this repository if you find a bug or have questions about the content.
  
 For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
