@@ -106,7 +106,5 @@ resources:
       parameters:
           service: hana
           service-plan: hdi-shared
-          config: 
-            database_id: cd05616c-bf8e-41d9-9952-ce9a5b967a3e
       properties:
           hdi-service-name: ${service-name}
