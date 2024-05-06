@@ -15,7 +15,7 @@ Follow the provided instructions in the 'Download and Installation' section to c
 
 ## Getting Started
 1. [Requirements](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/1-Requirements.md)
-2. [Configuration and Installation](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/2-Configuration%20and%20Installation.md)
+2. [Setup and Deploy](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/2-Setup%20and%20Deploy.md)
 
 ## UI Component
 The project includes a UI component. Follow the instruccions mentioned in the "if UI is attached" section of the previously referenced repository for configuration and installation. Once configured, the UI is set to be deployed locally. After running `npm run watch`, check the port number where the application router is listening. Replace the port in the URL with this port number to access and test the application locally.
