@@ -11,7 +11,7 @@ Basic sample for semantic search engine as CAP (Cloud Application Programming Mo
 
 The application follows a modular structure, with the backend logic located in the 'api' folder and the frontend components in the 'ui' folder. Explore the 'api' folder for backend logic, including data models, service definitions, and business logic implementation. The 'ui' folder contains the frontend components, such as views, controllers and assets for the web interface, developed using TypeScript and SAPUI5 (SAP's web framework for building enterprise-ready web applications).
 
-Follow the provided instructions in the 'Download and Installation' section to configure and install the application for deployment and development on SAP BTP.
+Follow the provided instructions in the 'Download and Installation' section to configure and setup the application for deployment and development on SAP BTP.
 
 ## Getting Started
 1. [Requirements](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/1-Requirements.md)
