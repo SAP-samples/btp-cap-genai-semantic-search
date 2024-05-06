@@ -1,4 +1,4 @@
-Before proceeding with the installation, ensure you have completed any necessary preliminary steps. You can find detailed configuration and installation instructions in the 'Prepare for Deployment, Deployment and Development' section of the [Similarity Search Application repository](https://github.com/SAP-samples/btp-cap-genai-rag/tree/cap-genai-semantic-search-sample).
+Before proceeding with the installation, ensure you have completed any necessary preliminary steps. You can find detailed configuration and installation instructions in the 'Prepare for Deployment, Deployment and Development' section of the [Similarity Search Application repository](https://github.com/SAP-samples/btp-cap-genai-rag/tree/cap-genaihub-vectorengine-sample).
 
 ### Notes:
 * **Ignore Error Message**: When creating the destination in SAP BTP Cockpit, you might encounter a message like "404 not found." Ignore this message, as long as the message dialog is green, indicating that the creation of the destination was successful.
