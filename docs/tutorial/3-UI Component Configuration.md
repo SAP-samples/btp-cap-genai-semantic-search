@@ -1,7 +1,6 @@
-**Prerequisites:** Make sure you have the following tools installed:
-- [Node.js](https://nodejs.org/) (v14+ recommended)
+**Prerequisites:** Make sure you have the following tools installed: [Node.js](https://nodejs.org/) (v14+ recommended)
 
-- **Setup and Run the UI Locally:**
+**Setup and Run the UI Locally:**
 1. Navigate to the `ui` folder.
 ```bash
 cd ui
@@ -10,7 +9,7 @@ cd ui
 ```bash
 npm install
 ```
-3. Start the application.
+3. Start the application in the root folder.
 ```bash
 npm run watch
 ```
