@@ -14,7 +14,7 @@ Run this command in the root folder:
 npm run watch
 ```
 
-If you are working in Visual Studio Code, install REST Client extension, if not you could use Postman to send the requests.
+If you are working in Visual Studio Code, install the REST Client extension; otherwise, you can use Postman to send the requests.
 
 #### Create Test Data
 
