@@ -6,12 +6,18 @@ Basic sample for semantic search engine on SAP Business Technology Platform
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
 -->
 ![Diagram](docs/architecture.png)
-## Description
-Basic sample for semantic search engine as CAP (Cloud Application Programming Model) application integrating generative AI hub and SAP HANA Cloud’s Vector Engine on SAP BTP, offering scalable and powerful search capabilities.
 
-The application follows a modular structure, with the backend logic located in the 'api' folder and the frontend components in the 'ui' folder. Explore the 'api' folder for backend logic, including data models, service definitions, and business logic implementation. The 'ui' folder contains the frontend components, such as views, controllers and assets for the web interface, developed using TypeScript and SAPUI5 (SAP's web framework for building enterprise-ready web applications).
+## **Description**
+This project is a basic sample for a semantic search engine built on SAP Business Technology Platform (BTP). It uses the Cloud Application Programming (CAP) model and integrates Generative AI Hub and SAP HANA Cloud’s Vector Engine to offer scalable and powerful search capabilities.
 
-Follow the provided instructions in the 'Download and Installation' section to configure and setup the application for deployment and development on SAP BTP.
+**Key Features:**
+- Semantic search powered by SAP HANA Cloud's Vector Engine.
+- Generative AI integration using the Generative AI Hub.
+- Modular structure with a CAP backend and SAPUI5 frontend.
+
+### **Project Structure**
+- **`api/`**: Contains backend logic, data models, service definitions, and business logic.
+- **`ui/`**: Contains frontend components like views, controllers, and assets using TypeScript and SAPUI5.
 
 ## Getting Started
 1. [Requirements](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/1-Requirements.md)
