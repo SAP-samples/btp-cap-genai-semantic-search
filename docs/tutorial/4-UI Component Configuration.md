@@ -16,7 +16,7 @@ Make sure you have [Node.js](https://nodejs.org/) (v14+ recommended) installed.
     ```
 4. Once the application is running, check the console output for a message indicating the port number the application is listening on. You should see a line similar to:
     ```bash
-    Server listening on port 5000
+    Application router is listening on port: 5000#
     ```
     Replace `PORT` with the correct port number to access and test the application locally in the browser.
     ```url
