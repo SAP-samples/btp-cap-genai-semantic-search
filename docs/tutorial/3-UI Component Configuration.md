@@ -5,7 +5,7 @@
 ```bash
 cd ui
 ```
-2. Install the dependencies.
+2. Install the dependencies (node_modules).
 ```bash
 npm install
 ```
