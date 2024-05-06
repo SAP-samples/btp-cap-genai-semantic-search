@@ -9,12 +9,15 @@ cd ui
 ```bash
 npm install
 ```
-3. Start the application in the root folder.
+3. Return to the root folder and start the application. This will start both the backend and frontend.
 ```bash
-npm run watch
+cd .. && npm run watch
 ```
-4. Check the port number where the application router is listening and replace `PORT` in the URL:
+4. Once the application is running, check the console output for a message indicating the port number the application is listening on. You should see a line similar to:
+```bash
+Server listening on port 5000
+```
+Replace `PORT` with the correct port number to access and test the application locally in the browser.
 ```url
 http://localhost:PORT
 ```
-Replace `PORT` with the correct port number to access and test the application locally.
