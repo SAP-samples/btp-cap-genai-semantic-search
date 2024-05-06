@@ -1,4 +1,4 @@
-**Prerequisites:** Make sure you have the following tools installed: [Node.js](https://nodejs.org/) (v14+ recommended)
+**Prerequisites:** Make sure you have [Node.js](https://nodejs.org/) (v14+ recommended) installed
 
 **Setup and Run the UI Locally:**
 1. Navigate to the `ui` folder.
