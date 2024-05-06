@@ -2,8 +2,6 @@
 
 In this section, you'll learn how to create test data using requests, test the backend with API requests, and validate the application's functionality via the UI.
 
-For testing the request as explained in "Setup and Deploy" numeral 2 after enering the UAA details from the Service Key of the genai-semantic-search-sample-uaa instance. You can test the backend by sending some requests.
-
 ### Test the Backend
 
 As explained in the [Setup and Deploy](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/2-Setup%20and%20Deploy.md) section, after configuring the UAA details from the Service Key of the `genai-semantic-search-sample-uaa` instance, you can test the backend by sending requests.
