@@ -14,14 +14,45 @@ Run this command in the root folder:
 npm run watch
 ```
 
+#### Install REST Client or Postman
+
 If you are working in Visual Studio Code, install the REST Client extension; otherwise, you can use Postman to send the requests.
+
+#### Obtain an XSUAA Token
+
+To access the API securely, you'll need to obtain an authentication token. Use this POST request to retrieve the token:
+
+```
+### GET XSUAA TOKEN
+
+# @name getXsuaaToken
+POST {{xsuaaHostname}}/oauth/token
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic {{btpXsuaaClient}}:{{btpXsuaaSecret}}
+
+client_id={{btpXsuaaClient}}
+&client_secret={{btpXsuaaSecret}}
+&grant_type=client_credentials
+````
+#### Fetch Documents
+
+After obtaining the token, use it to make an authorized request to fetch documents. Even if there are no documents initially, this test will verify that the backend is operational.
+
+```
+### FETCH DOCUMENTS
+
+# @name fetchDocuments
+GET {{btpAppHostname}}/odata/v4/sample/Documents
+Authorization: Bearer {{token}}
+```
 
 #### Create Test Data
 
 To create test data using the schema defined in [Configure the Data Model](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/3-Configure%20the%20Data%20Model.md), use as reference this POST request in the requests.http file:
 
 ```
-# @name embed2
+# @name embed1
 POST {{btpAppHostname}}/odata/v4/sample/embed
 content-type: application/json
 Authorization: Bearer {{token}}
@@ -35,5 +66,7 @@ For a large dataset you might use other tools to create random data sets such as
 
 - [kaggle](https://www.kaggle.com/)
 - [Mockaroo](https://www.mockaroo.com/)
+
+These samples requests are included in api/test/requests.sample.http which you have duplicated and renamed as requests.sample.http as explained in [Development](https://github.com/SAP-samples/btp-cap-genai-rag/tree/cap-genaihub-vectorengine-sample#Development) section of the reference project.
 
 ### Test the UI
