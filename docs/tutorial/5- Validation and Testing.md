@@ -70,3 +70,33 @@ For a large dataset you might use other tools to create random data sets such as
 These samples requests are included in api/test/requests.sample.http which you have duplicated and renamed as requests.sample.http as explained in [Development](https://github.com/SAP-samples/btp-cap-genai-rag/tree/cap-genaihub-vectorengine-sample#Development) section of the reference project.
 
 ### Test the UI
+
+After confirming that the backend is functioning and test data has been created you can test the interaction with the UI.
+
+1. Access the application through the URL
+
+```url
+http://localhost:5000/index.html
+```
+
+2. Perform a semantic search:
+
+- Search for documents related to topics such as "AI," "Health," "Science," "Technology," "Space," and more.
+- Type your desired keywords or phrases in the search bar.
+
+**Example Searches:**
+- `AI Technology`
+- `Health and Wellness`
+- `Space Exploration`
+- `Science Research`
+
+#### Review the Search Results:
+
+- A table displays up to 10 documents matching the search criteria.
+- The table title shows the count of documents found in brackets.
+- Next to the title, a tooltip containing a question mark reveals the generated SQL query used for the search.
+
+
+
+
+
