@@ -100,3 +100,7 @@ http://localhost:5000/index.html
 
 
 
+![Diagram](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/search_results_ui.png)
+
+
+
