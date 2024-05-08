@@ -107,7 +107,7 @@ The application will load, presenting a page with a search bar:
 - When executing the search again, the search text will be reformulated and displayed in the message strip.
 - The table will be updated and will show the results accordingly.
 <br>
-![Diagram](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/search_results_ui.png)
+![Diagram](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/reformulation_search_msg_strip.png)
   
 Image of message strip here
 
@@ -115,7 +115,6 @@ Image of message strip here
    
 - Language Extraction: Write a search in a different language, e.g., Spanish. Execute the search and check the tooltip to confirm that the WHERE clause now contains WHERE LANGUAGE='ES'.
 - Date Extraction: Type "Search documents about health from last year" and verify that the WHERE clause includes the correct date range.
-
-
-Image of tooltip here
+<br>
+![Diagram](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/search_query_overview.png)
 
