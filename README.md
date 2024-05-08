@@ -27,6 +27,7 @@ This project is a basic sample for a semantic search engine built on SAP Busines
 5. [Validation and Testing](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/5-%20Validation%20and%20Testing.md)
    - [Test the Backend](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/5-%20Validation%20and%20Testing.md#test-the-backend)
    - [Test the UI](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/5-%20Validation%20and%20Testing.md#test-the-ui)
+6. [Extend](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/6-Extend.md)
 
 ## How to obtain support
 [Create an issue](https://github.com/SAP-samples/btp-cap-genai-semantic-search/issues) in this repository if you find a bug or have questions about the content.
