@@ -12,6 +12,6 @@
 
 - [Validation and Testing](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/5-%20Validation%20and%20Testing.md)
 
-- Extend
+- [Extend](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/6-Extend.md)
 
 <!-- disco-toc-end -->
