@@ -106,7 +106,6 @@ The application will load, presenting a page with a search bar:
 ![Search Results](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/search_results_ui.png)
 
 </br>
-
 3. Refine your search:
    
 - You can refine the search by typing extra information into the search bar at the top.
