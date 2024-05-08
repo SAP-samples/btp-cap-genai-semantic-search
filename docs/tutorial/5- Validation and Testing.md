@@ -80,7 +80,7 @@ http://localhost:5000/index.html
 ```
 The application will load, presenting a page with a search bar:
 <br>
-![Diagram](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/semantic_search_initial_page.png)
+![Initial Page](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/semantic_search_initial_page.png)
 
 2. Perform a semantic search:
 
