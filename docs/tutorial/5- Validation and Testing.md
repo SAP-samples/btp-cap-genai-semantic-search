@@ -78,7 +78,7 @@ After confirming that the backend is functioning and test data has been created 
 ```url
 http://localhost:5000/index.html
 ```
-The application will load, presenting a page with a search bar:
+The application will load and display a page featuring a search bar:
 <br>
 
 ![Initial Page](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/semantic_search_initial_page.png "Initial Page")
