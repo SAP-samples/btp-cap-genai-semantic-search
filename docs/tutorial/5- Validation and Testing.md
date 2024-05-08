@@ -78,6 +78,9 @@ After confirming that the backend is functioning and test data has been created 
 ```url
 http://localhost:5000/index.html
 ```
+The application will load, presenting a page with a search bar:
+<br>
+![Diagram](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/semantic_search_initial_page.png)
 
 2. Perform a semantic search:
 
@@ -95,12 +98,24 @@ http://localhost:5000/index.html
 - A table displays up to 10 documents matching the search criteria.
 - The table title shows the count of documents found in brackets.
 - Next to the title, a tooltip containing a question mark reveals the generated SQL query used for the search.
-
-
-
-
-
+<br>
 ![Diagram](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/search_results_ui.png)
 
+3. Refine your search:
+   
+- You can refine the search by typing extra information into the search bar at the top.
+- When executing the search again, the search text will be reformulated and displayed in the message strip.
+- The table will be updated and will show the results accordingly.
+<br>
+![Diagram](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/search_results_ui.png)
+  
+Image of message strip here
 
+4. Verify search enhancements:
+   
+- Language Extraction: Write a search in a different language, e.g., Spanish. Execute the search and check the tooltip to confirm that the WHERE clause now contains WHERE LANGUAGE='ES'.
+- Date Extraction: Type "Search documents about health from last year" and verify that the WHERE clause includes the correct date range.
+
+
+Image of tooltip here
 
