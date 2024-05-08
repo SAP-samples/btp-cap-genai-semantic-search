@@ -10,7 +10,7 @@
 
 - [UI Component Configuration](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/4-UI%20Component%20Configuration.md)
 
-- Test
+- [Validation and Testing](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/5-%20Validation%20and%20Testing.md)
 
 - Extend
 
