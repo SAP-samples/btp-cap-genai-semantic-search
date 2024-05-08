@@ -109,8 +109,6 @@ The application will load, presenting a page with a search bar:
 <br>
 ![Diagram](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/reformulation_search_msg_strip.png)
   
-Image of message strip here
-
 4. Verify search enhancements:
    
 - Language Extraction: Write a search in a different language, e.g., Spanish. Execute the search and check the tooltip to confirm that the WHERE clause now contains WHERE LANGUAGE='ES'.
