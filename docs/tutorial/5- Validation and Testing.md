@@ -81,7 +81,7 @@ http://localhost:5000/index.html
 The application will load, presenting a page with a search bar:
 <br>
 
-![Initial Page](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/semantic_search_initial_page.png)
+![Initial Page](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/semantic_search_initial_page.png "Initial Page")
 
 </br>
 2. Perform a semantic search:
@@ -103,7 +103,7 @@ The application will load, presenting a page with a search bar:
 
 <br>
 
-![Search Results](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/search_results_ui.png)
+![Search Results](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/search_results_ui.png "Search Results Overview")
 
 </br>
 3. Refine your search:
@@ -114,7 +114,7 @@ The application will load, presenting a page with a search bar:
 
 <br>
 
-![Message Strip](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/reformulation_search_msg_strip.png)
+![Message Strip](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/reformulation_search_msg_strip.png "Reformulated Text")
 
 </br>
 4. Verify search enhancements:
@@ -122,5 +122,5 @@ The application will load, presenting a page with a search bar:
 - Language Extraction: Write a search in a different language, e.g., Spanish. Execute the search and check the tooltip to confirm that the WHERE clause now contains WHERE LANGUAGE='ES'.
 - Date Extraction: Type "Search documents about health from last year" and verify that the WHERE clause includes the correct date range.
 
-![Sql Query](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/search_query_overview.png)
+![Sql Query](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/search_query_overview.png "Search Query Overview")
 
