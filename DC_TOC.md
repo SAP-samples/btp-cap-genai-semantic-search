@@ -1,6 +1,7 @@
 ## Table of Contents
 
 <!-- disco-toc-start -->
+- [Overview](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/Overview.md)
 
 - [Requirements](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/1-Requirements.md)
   
