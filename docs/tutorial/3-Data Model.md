@@ -25,7 +25,7 @@ context sample.db {
 
 The Documents entity represents the data model for this application, containing attributes such as text, title, author, date, and more.
 
-### Configure the Data Model
+### Build and deploy the Data Model
 
 If you want to test the application with a different dataset or make changes to the data model, you can do so by modifying the schema defined in the schema.cds file. However, it's important to note that deploying changes to the data model may require updating the application's artifacts and redeploying the application. To do this, use the following command in the root folder:
 
