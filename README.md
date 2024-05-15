@@ -1,8 +1,6 @@
 # CAP Application: Semantic Search Integrated with Generative AI Hub and SAP HANA Cloud's Vector Engine
 Basic sample for semantic search engine on SAP Business Technology Platform
 
-
-Register repository https://api.reuse.software/register, then add REUSE badge:
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/btp-cap-genai-semantic-search)](https://api.reuse.software/info/github.com/SAP-samples/btp-cap-genai-semantic-search)
 
 ![Diagram](docs/architecture.png)
