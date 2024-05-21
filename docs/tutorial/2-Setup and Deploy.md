@@ -51,9 +51,10 @@ To start with this project, follow these steps:
 > ℹ️ **Note**
 > Make sure [TypeScript support is enabled](https://cap.cloud.sap/docs/node.js/typescript), otherwise run `npm i -g typescript ts-node`
 
-1. Run `npm install` or `yarn install` to install project specific dependencies.
-2. Login to your subaccount with [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html), running `cf login`.
-3. [Bind services for hybrid testing](https://cap.cloud.sap/docs/advanced/hybrid-testing) and development (create Service Keys if necessary).
+1. Navigate to `router` directory and run `npm install` or `yarn install` to install project specific dependencies.
+2. Duplicate `router/default-services.sapmple.json` to `router/default-services.json` and enter the 'url', 'clientid' and 'clientsecret' from the UAA instance.
+3. Login to your subaccount with [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html), running `cf login`.
+4. [Bind services for hybrid testing](https://cap.cloud.sap/docs/advanced/hybrid-testing) and development (create Service Keys if necessary).
 
    ```yaml
    cd api # make sure to execute in the api directory
@@ -63,8 +64,8 @@ To start with this project, follow these steps:
    ```
    After the services are bound successfuly, `api/.cdsrc-private.json` should exist with the `hybrid` profile.
 
-4. Run npm run `watch:api` or yarn `watch:api` from project root to start CAP backend.
-5. Duplicate `api/test/requests.sample.http` to `api/test/requests.http` and enter UAA details from the Service Key of the `genaihub-vectorengine-sample-uaa` instance to execute the requests.
+5. Run npm run `watch:api` or yarn `watch:api` from project root to start CAP backend.
+6. Duplicate `api/test/requests.sample.http` to `api/test/requests.http` and enter UAA details from the Service Key of the `genaihub-vectorengine-sample-uaa` instance to execute the requests.
 
 ### Notes:
 * **Ignore Error Message**: When creating the destination in SAP BTP Cockpit, you might encounter a message like "404 not found." Ignore this message, as long as the message dialog is green, indicating that the creation of the destination was successful.
