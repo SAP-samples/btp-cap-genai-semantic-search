@@ -46,9 +46,9 @@ To start with this project, follow these steps:
 4. Login to your subaccount with [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html), running `cf login`.
 5. Run `npm run deploy` or `yarn deploy` on CLI to deploy the API to your Subaccount. After deployment, you will find the following instances created under "Services -> Instances" in BTP:
    ```yaml
-   genai-semantic-search-sample-uaa
-   genaihub-vectorengine-sample-destination
-   genaihub-vectorengine-sample-hdi-container
+   genai-semantic-search-sample-uaa    
+   genai-semantic-search-sample-destination
+   genai-semantic-search-sample-hdi-container
    ```
 ### **Development**
 
@@ -61,9 +61,9 @@ To start with this project, follow these steps:
 4. [Bind services for hybrid testing](https://cap.cloud.sap/docs/advanced/hybrid-testing) and development (create Service Keys if necessary).
    ```yaml
    cd api # make sure to execute in the api directory
-   cds bind -2 genaihub-vectorengine-sample-uaa
-   cds bind -2 genaihub-vectorengine-sample-destination
-   cds bind -2 genaihub-vectorengine-sample-hdi-container
+   cds bind -2 genai-semantic-search-sample-uaa
+   cds bind -2 genai-semantic-search-sample-destination
+   cds bind -2 genai-semantic-search-sample-hdi-container
    ```
    After the services are bound successfuly, `api/.cdsrc-private.json` should exist with the `hybrid` profile.
 
