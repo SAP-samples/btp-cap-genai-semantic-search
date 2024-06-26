@@ -49,7 +49,7 @@ Authorization: Bearer {{token}}
 
 #### Create Test Data
 
-To create test data using the schema defined in [Data Model](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/3-Data%20Model.md), use as reference this POST request in the requests.http file:
+To be able to test, it is necessary to have data in the database instance. To create test data using the schema defined in [Data Model](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/3-Data%20Model.md), use as reference this POST request in the requests.http file:
 
 ```
 # @name embed1
@@ -61,6 +61,11 @@ Authorization: Bearer {{token}}
   "data": "{\"text\":\"Artificial Intelligence (AI) has seamlessly integrated into our daily routines, from smart assistants to personalized recommendations. This article explores how AI has transformed everyday life.\", \"title\":\"AI Everyday: The Integration of Artificial Intelligence into Daily Life\", \"author\":\"Megan Lee\", \"date\":\"2018-07-12\", \"summary\":\"An overview of how artificial intelligence has become a fundamental part of our daily routines, improving efficiency and personalization.\", \"category\":\"Technology\", \"tags\":[\"AI\", \"technology\", \"daily life\", \"smart technology\"], \"language\":\"EN\", \"publication\":\"Tech Today\", \"rights\":\"All rights reserved.\"}"
 }
 ```
+To visualize the created data, use the Database Explorer tool. You can access it within your SAP HANA Cloud instance in the SAP BTP Cockpit by following these steps:
+
+Navigate to the instance where your data is stored.
+In the 'Actions' column, click the three dots and select "Open in SAP HANA Database Explorer."
+Once you have verified that the corresponding table contains data, you may proceed with the UI testing.
 
 For a large dataset you might use other tools to create random data sets such as:
 
@@ -68,6 +73,8 @@ For a large dataset you might use other tools to create random data sets such as
 - [Mockaroo](https://www.mockaroo.com/)
 
 These samples requests are included in api/test/requests.sample.http which you have duplicated and renamed as requests.sample.http as explained in [Development](https://github.com/SAP-samples/btp-cap-genai-rag/tree/cap-genaihub-vectorengine-sample#Development) section of the reference project.
+
+
 
 ### Test the UI
 
