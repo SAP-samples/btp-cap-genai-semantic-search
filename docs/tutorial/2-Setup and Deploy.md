@@ -42,7 +42,7 @@ To start with this project, follow these steps:
 
 1. Run `npm install` or `yarn install` in `api` directory to install project specific dependencies.
 2. Duplicate `api/.cdsrc.sample.json` to `api/.cdsrc.json` and enter the Deployment IDs for the created ChatCompletion and Embedding model from the preparation steps above. Adjust the Resource Group if necessary.
-3. Run `npm run build` or `yarn build` on CLI to build the MTA.
+3. Navigate to the root folder and run `npm run build` or `yarn build` on CLI to build the MTA.
 4. Login to your subaccount with [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html), running `cf login`.
 5. Run `npm run deploy` or `yarn deploy` on CLI to deploy the API to your Subaccount.
 
