@@ -25,27 +25,15 @@ context sample.db {
 
 ### Build and Deploy the Data Model
 
-To test the application with a different dataset or modify the data model, the schema in the `schema.cds` file should be updated. Deploying changes to the data model involves updating the application's artifacts and redeploying. The following steps outline the build and deployment process:
+> ℹ️ **Note**
+> The following step is only necessary if it is desired to test with a different dataset or data model.
+
+The schema in the `schema.cds` file should be updated. Deploying changes to the data model involves updating the application's artifacts and redeploying. The following steps outline the build and deployment process:
 
 ```bash
 # Navigate to the root folder and execute:
 npm run build:deploy
 ```
-
-Ensure that all necessary services are bound by executing the commands in the api directory:
-
-```yaml
-cd api # make sure to execute in the api directory
-cds bind -2 genai-semantic-search-sample-uaa
-cds bind -2 genai-semantic-search-sample-destination
-cds bind -2 genai-semantic-search-sample-hdi-container
-```
-Start the application and test with the modified data model:
-
-```bash
-npm run watch
-```
-
 ### Example Modifications
 
 To modify the `Documents` entity in the `schema.cds` file, follow these examples:
