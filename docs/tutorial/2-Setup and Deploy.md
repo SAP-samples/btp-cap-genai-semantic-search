@@ -33,7 +33,7 @@ To start with this project, follow these steps:
    URL.headers.Content-Type: application/json
    HTML5.DynamicDestination: true
    ````
-4. [Create SAP HANA Cloud instance](https://help.sap.com/docs/HANA_CLOUD_ALIBABA_CLOUD/683a53aec4fc408783bbb2dd8e47afeb/7d4071a49c204dfc9e542c5e47b53156.html) with Vector Engine (QRC 1/2024 or later). Starting with this release, the Vector Engine is automatically enabled; manual activation is not required.
+4. [Create SAP HANA Cloud instance](https://help.sap.com/docs/HANA_CLOUD_ALIBABA_CLOUD/683a53aec4fc408783bbb2dd8e47afeb/7d4071a49c204dfc9e542c5e47b53156.html) with Vector Engine (QRC 1/2024 or later). Starting with this release, Vector Engine is automatically enabled; manual activation is not required.
 
 ### **Deployment**
 
