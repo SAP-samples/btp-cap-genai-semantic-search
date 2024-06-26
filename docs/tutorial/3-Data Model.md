@@ -36,9 +36,9 @@ Ensure that all necessary services are bound by executing the commands in the ap
 
 ```yaml
 cd api # make sure to execute in the api directory
-cds bind -2 genaihub-vectorengine-sample-uaa
-cds bind -2 genaihub-vectorengine-sample-destination
-cds bind -2 genaihub-vectorengine-sample-hdi-container
+cds bind -2 genai-semantic-search-sample-uaa
+cds bind -2 genai-semantic-search-sample-destination
+cds bind -2 genai-semantic-search-sample-hdi-container
 ```
 Start the application and test with the modified data model:
 
