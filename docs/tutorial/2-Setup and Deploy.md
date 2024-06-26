@@ -52,7 +52,7 @@ To start with this project, follow these steps:
 > Make sure [TypeScript support is enabled](https://cap.cloud.sap/docs/node.js/typescript), otherwise run `npm i -g typescript ts-node`
 
 1. Navigate to `router` directory and run `npm install` or `yarn install` to install project specific dependencies.
-2. Duplicate `router/default-services.sapmple.json` to `router/default-services.json` and enter the 'url', 'clientid' and 'clientsecret' from the UAA instance.
+2. Duplicate `router/dev/default-services.sapmple.json` to `router/dev/default-services.json` and enter the 'url', 'clientid' and 'clientsecret' from the UAA instance.
 3. Login to your subaccount with [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html), running `cf login`.
 4. [Bind services for hybrid testing](https://cap.cloud.sap/docs/advanced/hybrid-testing) and development (create Service Keys if necessary).
 
