@@ -49,7 +49,7 @@ Authorization: Bearer {{token}}
 
 #### Create Test Data
 
-To create test data using the schema defined in [Configure the Data Model](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/3-Configure%20the%20Data%20Model.md), use as reference this POST request in the requests.http file:
+To create test data using the schema defined in [Data Model](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/3-Data%20Model.md), use as reference this POST request in the requests.http file:
 
 ```
 # @name embed1
