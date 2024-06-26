@@ -26,7 +26,7 @@ context sample.db {
 ### Build and Deploy the Data Model
 
 > ℹ️ **Note**
-> The following step is only necessary if it is desired to test with a different dataset or data model.
+> The following step is only necessary, if it is desired to test with a different dataset or data model.
 
 The schema in the `schema.cds` file should be updated. Deploying changes to the data model involves updating the application's artifacts and redeploying. The following steps outline the build and deployment process:
 
