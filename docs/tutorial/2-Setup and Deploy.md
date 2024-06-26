@@ -42,7 +42,7 @@ To start with this project, follow these steps:
 
 1. Run `npm install` or `yarn install` in `api` directory to install project specific dependencies.
 2. Duplicate `api/.cdsrc.sample.json` to `api/.cdsrc.json` and enter the Deployment IDs for the created ChatCompletion and Embedding model from the preparation steps above. Adjust the Resource Group if necessary.
-3. Navigate to the root folder and run `npm run build` or `yarn build` to build the MTA.
+3. Navigate to the root folder and run `npm run build` or `yarn build` to build the mta.yaml file. 
 4. Login to your subaccount with [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html), running `cf login`.
 5. Run `npm run deploy` or `yarn deploy` on CLI to deploy the API to your Subaccount. After deployment, you will find the following instances created under "Services -> Instances" in BTP:
    ```yaml
@@ -68,7 +68,7 @@ To start with this project, follow these steps:
    After the services are bound successfuly, `api/.cdsrc-private.json` should exist with the `hybrid` profile.
 
 5. Run npm run `watch:api` or yarn `watch:api` from project root to start CAP backend.
-6. Duplicate `api/test/requests.sample.http` to `api/test/requests.http` and enter UAA details from the Service Key of the `genaihub-vectorengine-sample-uaa` instance to execute the requests.
+6. Duplicate `api/test/requests.sample.http` to `api/test/requests.http` and enter UAA details from the Service Key of the `genaihub-vectorengine-sample-uaa`. These requests will be utilized for testing in subsequent steps.
 
 ### Notes:
 * **Ignore Error Message**: When creating the destination in SAP BTP Cockpit, you might encounter a message like "404 not found." Ignore this message, as long as the message dialog is green, indicating that the creation of the destination was successful.
