@@ -44,8 +44,12 @@ To start with this project, follow these steps:
 2. Duplicate `api/.cdsrc.sample.json` to `api/.cdsrc.json` and enter the Deployment IDs for the created ChatCompletion and Embedding model from the preparation steps above. Adjust the Resource Group if necessary.
 3. Navigate to the root folder and run `npm run build` or `yarn build` to build the MTA.
 4. Login to your subaccount with [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html), running `cf login`.
-5. Run `npm run deploy` or `yarn deploy` on CLI to deploy the API to your Subaccount.
-
+5. Run `npm run deploy` or `yarn deploy` on CLI to deploy the API to your Subaccount. After deployment, you will find the following instances created under "Services -> Instances" in BTP:
+   ```yaml
+   genai-semantic-search-sample-uaa
+   genaihub-vectorengine-sample-destination
+   genaihub-vectorengine-sample-hdi-container
+   ```
 ### **Development**
 
 > ℹ️ **Note**
@@ -55,7 +59,6 @@ To start with this project, follow these steps:
 2. Duplicate `router/dev/default-services.sapmple.json` to `router/dev/default-services.json` and enter the 'url', 'clientid' and 'clientsecret' from the UAA instance.
 3. Login to your subaccount with [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html), running `cf login`.
 4. [Bind services for hybrid testing](https://cap.cloud.sap/docs/advanced/hybrid-testing) and development (create Service Keys if necessary).
-
    ```yaml
    cd api # make sure to execute in the api directory
    cds bind -2 genaihub-vectorengine-sample-uaa
