@@ -56,5 +56,5 @@ content-type: application/json
 Authorization: Bearer {{token}}
 
 {
-  "text": "Looking for tech related documents"
+  "snippets": ["Looking for tech related documents"]
 }
