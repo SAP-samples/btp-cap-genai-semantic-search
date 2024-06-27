@@ -14,5 +14,5 @@
 - Extend
   - [Enhancements](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/6-Extend.md)<!-- dc-card: {"label": ["Hands-On"]} dc-card -->
 - Complete
-  - [Complete the Mission](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/Complete.md)<!-- dc-card: {"label": ["Milestone"]} dc-card -->
+  - [Complete the Mission](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/Complete.md)<!-- dc-card: {"label": ["Hands-On"]} dc-card -->
 <!-- disco-toc-end -->
