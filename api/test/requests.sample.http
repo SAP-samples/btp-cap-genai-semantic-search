@@ -19,7 +19,7 @@ client_id={{btpXsuaaClient}}
 ###
 @token = {{getXsuaaToken.response.body.$.access_token}}
 
-### CREATE DATA AND CALCULATE EMBEDDINGS FOR THE "TEXT" attribute
+### CREATE DATA AND CALCULATE EMBEDDINGS FOR THE "TEXT" ATTRIBUTE
 # @name embed1
 POST {{btpAppHostname}}/odata/v4/sample/embed
 content-type: application/json
