@@ -6,10 +6,11 @@ To start with this project, follow these steps:
 1. Clone this repository.
    ```bash
    git clone https://github.com/SAP-samples/btp-cap-genai-semantic-search.git
+   ```
 2. Navigate to the project directory.
    ```bash
    cd btp-cap-genai-semantic-search
-
+   ```
 ### **Prepare for Deployment**
 
 1. [Create an instance of SAP AI Core](https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/create-service-instance) and make sure to choose the service plan `extended` to activate Generative AI Hub and continue [creating a Service Key](https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/create-service-key). When setting up the SAP AI Core instance, a default resource group named "default" will be automatically created. Please select this as the resource group ID for the subsequent step.
