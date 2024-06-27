@@ -4,7 +4,7 @@ In this section, you'll learn how to create test data using requests, test the b
 
 ### Test the Backend
 
-As explained in the [Setup and Deploy](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/2-Setup%20and%20Deploy.md) section, after configuring the UAA details from the Service Key of the `genai-semantic-search-sample-uaa` instance, you can test the backend by sending requests.
+As explained in the [Setup and Deploy](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/2-Setup%20and%20Deploy.md) section, after configuring the UAA details from the Service Key of the `genai-semantic-search-sample-uaa` instance, you can test the backend by sending requests. Use as reference: `api/test/requests.sample.http`
 
 #### Start the Application
 
@@ -24,7 +24,6 @@ To access the API securely, you'll need to obtain an authentication token. Use t
 
 ```
 ### GET XSUAA TOKEN
-
 # @name getXsuaaToken
 POST {{xsuaaHostname}}/oauth/token
 Accept: application/json
@@ -41,7 +40,6 @@ After obtaining the token, use it to make an authorized request to fetch documen
 
 ```
 ### FETCH DOCUMENTS
-
 # @name fetchDocuments
 GET {{btpAppHostname}}/odata/v4/sample/Documents
 Authorization: Bearer {{token}}
@@ -52,6 +50,7 @@ Authorization: Bearer {{token}}
 To be able to test, it is necessary to have data in the database instance. To create test data using the schema defined in [Data Model](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/3-Data%20Model.md), use as reference this POST request in the requests.http file:
 
 ```
+### CREATE DATA AND CALCULATE EMBEDDINGS FOR THE "Text" ATTRIBUTE
 # @name embed1
 POST {{btpAppHostname}}/odata/v4/sample/embed
 content-type: application/json
@@ -61,19 +60,29 @@ Authorization: Bearer {{token}}
   "data": "{\"text\":\"Artificial Intelligence (AI) has seamlessly integrated into our daily routines, from smart assistants to personalized recommendations. This article explores how AI has transformed everyday life.\", \"title\":\"AI Everyday: The Integration of Artificial Intelligence into Daily Life\", \"author\":\"Megan Lee\", \"date\":\"2018-07-12\", \"summary\":\"An overview of how artificial intelligence has become a fundamental part of our daily routines, improving efficiency and personalization.\", \"category\":\"Technology\", \"tags\":[\"AI\", \"technology\", \"daily life\", \"smart technology\"], \"language\":\"EN\", \"publication\":\"Tech Today\", \"rights\":\"All rights reserved.\"}"
 }
 ```
-To visualize the created data, use the Database Explorer tool. You can access it within your SAP HANA Cloud instance in the SAP BTP Cockpit by following these steps:
+In order to confirm that you have the created data, you can either send the fetch request again and confirm there are documents retrieved or use the SAP Database Explorer tool. You can access it within your SAP HANA Cloud instance in SAP BTP Cockpit by navigating to the instance where your data is stored. In the 'Actions' column, click the three dots and select "Open in SAP HANA Database Explorer".
 
-Navigate to the instance where your data is stored.
-In the 'Actions' column, click the three dots and select "Open in SAP HANA Database Explorer."
-Once you have verified that the corresponding table contains data, you may proceed with the UI testing.
 
-For a large dataset you might use other tools to create random data sets such as:
+Once you have verified that the corresponding table contains data, you can test the search request:
+
+```
+### SEARCH
+# @name search
+POST {{btpAppHostname}}/odata/v4/sample/search
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "snippets": ["Looking for tech related documents"]
+}
+```
+
+For creating larger datasets you might use other tools to create random data sets such as:
 
 - [kaggle](https://www.kaggle.com/)
 - [Mockaroo](https://www.mockaroo.com/)
 
 These samples requests are included in api/test/requests.sample.http which you have duplicated and renamed as requests.sample.http as explained in [Development](https://github.com/SAP-samples/btp-cap-genai-rag/tree/cap-genaihub-vectorengine-sample#Development) section of the reference project.
-
 
 
 ### Test the UI
