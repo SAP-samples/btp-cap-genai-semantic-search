@@ -19,26 +19,7 @@ client_id={{btpXsuaaClient}}
 ###
 @token = {{getXsuaaToken.response.body.$.access_token}}
 
-### FETCH DOCUMENTS
-
-# @name fetchDocuments
-GET {{btpAppHostname}}/odata/v4/sample/Documents
-Authorization: Bearer {{token}}
-
-### CHAT COMPLETION
-
-@token = {{getXsuaaToken.response.body.$.access_token}}
-# @name chatCompeletion
-POST {{btpAppHostname}}/odata/v4/sample/chatCompletion
-content-type: application/json
-Authorization: Bearer {{token}}
-
-{
-  "prompt": "Hi, whats your name?"
-}
-
-
-### EMBED 1
+### CREATE DATA AND CALCULATE EMBEDDINGS FOR THE "TEXT" attribute
 # @name embed1
 POST {{btpAppHostname}}/odata/v4/sample/embed
 content-type: application/json
@@ -48,8 +29,12 @@ Authorization: Bearer {{token}}
   "data": "{\"text\":\"Artificial Intelligence (AI) has seamlessly integrated into our daily routines, from smart assistants to personalized recommendations. This article explores how AI has transformed everyday life.\", \"title\":\"AI Everyday: The Integration of Artificial Intelligence into Daily Life\", \"author\":\"Megan Lee\", \"date\":\"2018-07-12\", \"summary\":\"An overview of how artificial intelligence has become a fundamental part of our daily routines, improving efficiency and personalization.\", \"category\":\"Technology\", \"tags\":[\"AI\", \"technology\", \"daily life\", \"smart technology\"], \"language\":\"EN\", \"publication\":\"Tech Today\", \"rights\":\"All rights reserved.\"}"
 }
 
-### SEARCH
+### FETCH DOCUMENTS
+# @name fetchDocuments
+GET {{btpAppHostname}}/odata/v4/sample/Documents
+Authorization: Bearer {{token}}
 
+### SEARCH
 # @name search
 POST {{btpAppHostname}}/odata/v4/sample/search
 content-type: application/json
