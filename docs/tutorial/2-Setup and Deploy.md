@@ -69,7 +69,7 @@ To start with this project, follow these steps:
    After the services are bound successfuly, `api/.cdsrc-private.json` should exist with the `hybrid` profile.
 
 5. Run npm run `watch:api` or yarn `watch:api` from project root to start CAP backend.
-6. Duplicate `api/test/requests.sample.http` to `api/test/requests.http` and enter UAA details from the Service Key of the `genaihub-vectorengine-sample-uaa`. These requests will be utilized for testing in subsequent steps.
+6. Duplicate `api/test/requests.sample.http` to `api/test/requests.http` and enter UAA details from the Service Key of the `genai-semantic-search-sample-uaa`. These requests will be utilized for testing in subsequent steps.
 
 ### Notes:
 * **Ignore Error Message**: When creating the destination in SAP BTP Cockpit, you might encounter a message like "404 not found." Ignore this message, as long as the message dialog is green, indicating that the creation of the destination was successful.
