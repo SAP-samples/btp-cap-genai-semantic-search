@@ -57,9 +57,8 @@ To start with this project, follow these steps:
 > Make sure [TypeScript support is enabled](https://cap.cloud.sap/docs/node.js/typescript), otherwise run `npm i -g typescript ts-node`
 
 1. Navigate to `router` directory and run `npm install` or `yarn install` to install project specific dependencies.
-2. Duplicate `router/dev/default-services.sapmple.json` to `router/dev/default-services.json` and enter the 'url', 'clientid' and 'clientsecret' from the UAA instance previously created in BTP.
-3. Login to your subaccount with [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html), running `cf login`.
-4. [Bind services for hybrid testing](https://cap.cloud.sap/docs/advanced/hybrid-testing) and development (create Service Keys if necessary).
+2. Login to your subaccount with [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html), running `cf login`.
+3. [Bind services for hybrid testing](https://cap.cloud.sap/docs/advanced/hybrid-testing) and development (create Service Keys if necessary).
    ```yaml
    cd api # make sure to execute in the api directory
    cds bind -2 genai-semantic-search-sample-uaa
@@ -67,7 +66,7 @@ To start with this project, follow these steps:
    cds bind -2 genai-semantic-search-sample-hdi-container
    ```
    After the services are bound successfuly, `api/.cdsrc-private.json` should exist with the `hybrid` profile.
-
+4. Duplicate `router/dev/default-services.sapmple.json` to `router/dev/default-services.json` and enter the 'url', 'clientid' and 'clientsecret' from the UAA instance previously created in BTP.
 5. Run npm run `watch:api` or yarn `watch:api` from project root to start CAP backend.
 6. Duplicate `api/test/requests.sample.http` to `api/test/requests.http` and enter UAA details from the Service Key of the `genai-semantic-search-sample-uaa`. These requests will be utilized for testing in subsequent steps.
 
