@@ -89,6 +89,9 @@ These samples requests are included in api/test/requests.sample.http which you h
 
 After confirming that the backend is functioning and test data has been created you can test the interaction with the UI.
 
+> ℹ️ **Note**
+> After executing 'npm run watch', the URL http://localhost:8080/index.html will be opened in the browser. Change the port manually to '5000' to avoid an authorization error.
+
 1. Access the application through the URL
 
 ```url
