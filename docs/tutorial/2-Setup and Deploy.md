@@ -38,7 +38,7 @@ To start with this project, follow these steps:
 
 ### **Deployment**
 
-> ℹ️ **Note**
+> ℹ️ **Note:**
 > Make sure [TypeScript support is enabled](https://cap.cloud.sap/docs/node.js/typescript), otherwise run `npm i -g typescript ts-node`
 
 1. Run `npm install` or `yarn install` in `api` directory to install project specific dependencies.
@@ -53,7 +53,7 @@ To start with this project, follow these steps:
    ```
 ### **Development**
 
-> ℹ️ **Note**
+> ℹ️ **Note:**
 > Make sure [TypeScript support is enabled](https://cap.cloud.sap/docs/node.js/typescript), otherwise run `npm i -g typescript ts-node`
 
 1. Navigate to `router` directory and run `npm install` or `yarn install` to install project specific dependencies.
