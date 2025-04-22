@@ -3,7 +3,9 @@ Basic sample for semantic search engine on SAP Business Technology Platform
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/btp-cap-genai-semantic-search)](https://api.reuse.software/info/github.com/SAP-samples/btp-cap-genai-semantic-search)
 
-![Diagram](docs/reference-architecture-generative-ai-semantic-search.svg)
+<a href="docs/reference-architecture-generative-ai-semantic-search.svg" target="_blank">
+  <img src="docs/reference-architecture-generative-ai-semantic-search.svg" width="800" />
+</a>
 
 ## **Description**
 This project is a basic sample for a semantic search engine built on SAP Business Technology Platform (BTP). It uses the Cloud Application Programming (CAP) model and integrates Generative AI Hub and SAP HANA Cloud’s Vector Engine to offer scalable and powerful search capabilities.
