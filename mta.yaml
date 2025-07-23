@@ -54,7 +54,7 @@ modules:
           app-name: genai-semantic-search-sample-srv-${space}
           memory: 256MB
           disk-quota: 1024MB
-          command: node ./node_modules/@sap/cds/bin/cds-serve
+          command: node ./node_modules/@sap/cds/bin/serve.js
       requires:
           - name: genai-semantic-search-sample-uaa
           - name: genai-semantic-search-sample-destination
@@ -106,7 +106,5 @@ resources:
       parameters:
           service: hana
           service-plan: hdi-shared
-          config: 
-            database_id: <your-unique-database-id-here>
       properties:
           hdi-service-name: ${service-name}
