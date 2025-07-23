@@ -14,13 +14,13 @@ service SampleService {
     }
     
     entity DocumentWithSimilarity {
+        key id     : UUID;
         document   : Association to db.Documents;
         similarity : Double;
     }
     
-    entity Documents as projection on db.Documents excluding { embedding };
+    entity Documents as projection on db.Documents;
 
     action embed(data : String)            returns Boolean;
     action search(snippets: array of String) returns SearchResponse;
-    action chatCompletion(prompt : String) returns String;
 }

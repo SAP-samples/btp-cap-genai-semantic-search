@@ -3,7 +3,7 @@ using {cuid} from '@sap/cds/common';
 context sample.db {
 
       entity Documents : cuid {
-            text      : String;
+            text      : String(200);
             title       : String(200);
             author      : String(150);
             date        : Date;

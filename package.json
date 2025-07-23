@@ -17,7 +17,10 @@
         "build:deploy": "npm run build && npm run deploy"
     },
     "devDependencies": {
-        "@types/openui5": "^1.120.3"
+        "@types/openui5": "^1.120.3",
+        "ts-node": "^10.9.2",
+        "ts-node-cwd": "^10.0.0",
+        "typescript": "^5.8.3"
     },
     "dependencies": {
         "generator-easy-ui5": "^3.8.1"
