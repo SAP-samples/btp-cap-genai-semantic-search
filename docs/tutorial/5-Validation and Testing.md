@@ -47,7 +47,8 @@ Authorization: Bearer {{token}}
 
 #### Create Test Data
 
-To be able to test, it is necessary to have data in the database instance. To create test data using the schema defined in [Data Model](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/3-Data%20Model.md), use as reference this POST request in the requests.http file:
+To evaluate the semantic search capabilities, it is important to populate the database with a diverse and sufficiently large set of documents. Each entry is embedded as a vector, enabling similarity-based retrieval during search. 
+You can generate test entries using the schema defined in the [Data Model](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/tutorial/3-Data%20Model.md). Use the following example POST request from the `requests.http` file (You can use tools like the REST Client in VS Code, Postman, or a script to send multiple requests):
 
 ```
 ### CREATE DATA AND CALCULATE EMBEDDINGS FOR THE "Text" ATTRIBUTE
@@ -60,8 +61,9 @@ Authorization: Bearer {{token}}
   "data": "{\"text\":\"Artificial Intelligence (AI) has seamlessly integrated into our daily routines, from smart assistants to personalized recommendations. This article explores how AI has transformed everyday life.\", \"title\":\"AI Everyday: The Integration of Artificial Intelligence into Daily Life\", \"author\":\"Megan Lee\", \"date\":\"2018-07-12\", \"summary\":\"An overview of how artificial intelligence has become a fundamental part of our daily routines, improving efficiency and personalization.\", \"category\":\"Technology\", \"tags\":[\"AI\", \"technology\", \"daily life\", \"smart technology\"], \"language\":\"EN\", \"publication\":\"Tech Today\", \"rights\":\"All rights reserved.\"}"
 }
 ```
-In order to confirm that you have the created data, you can either send the fetch request again and confirm there are documents retrieved or use the SAP Database Explorer tool. You can access it within your SAP HANA Cloud instance in SAP BTP Cockpit by navigating to the instance where your data is stored. In the 'Actions' column, click the three dots and select "Open in SAP HANA Database Explorer".
+Repeat this request with different content to insert multiple documents. For optimal testing, aim to create at least 15–20 varied entries across different topics, languages, and publication dates.
 
+In order to confirm that you have the created data, you can either send the fetch request again and confirm there are documents retrieved or use the SAP Database Explorer tool. You can access it within your SAP HANA Cloud instance in SAP BTP Cockpit by navigating to the instance where your data is stored. In the 'Actions' column, click the three dots and select "Open in SAP HANA Database Explorer".
 
 Once you have verified that the corresponding table contains data, you can test the search request:
 
