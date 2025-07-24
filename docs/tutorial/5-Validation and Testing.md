@@ -88,21 +88,14 @@ These samples requests are included in api/test/requests.sample.http which you h
 ### Test the UI
 
 After confirming that the backend is functioning and test data has been created you can test the interaction with the UI.
+1. Execute `npm run watch` in the root folder to start the application, the URL http://localhost:5000/index.html will be opened in the browser.
 
-> ℹ️ **Note**
-> After executing 'npm run watch', the URL http://localhost:8080/index.html will be opened in the browser. Change the port manually to '5000' to avoid an authorization error.
-
-1. Access the application through the URL
-
-```url
-http://localhost:5000/index.html
-```
-The application will load and display a page featuring a search bar:
-<br>
-
-![Initial Page](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/semantic_search_initial_page.png "Initial Page")
-
-</br>
+  The application will load and display a page featuring a search bar:
+  <br>
+  
+  ![Initial Page](https://github.com/SAP-samples/btp-cap-genai-semantic-search/blob/main/docs/semantic_search_initial_page.png "Initial Page")
+  
+  </br>
 2. Perform a semantic search:
 
 - Search for documents related to topics such as "AI," "Health," "Science," "Technology," "Space," and more.
