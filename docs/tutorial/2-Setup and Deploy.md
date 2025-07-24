@@ -80,4 +80,4 @@ To start with this project, follow these steps:
 6. Duplicate `api/test/requests.sample.http` to `api/test/requests.http` and enter UAA details from the Service Key of the `genai-semantic-search-sample-uaa`. These requests will be utilized for testing in subsequent steps.
 
 ### Notes:
-* **Cloud Foundry Login**: If deploying to a different Cloud Foundry account, use `cf login -a API_ENDPOINT -o ORG_NAME`.
+* **Cloud Foundry Login**: `cf login -a API_ENDPOINT -o ORG_NAME`
