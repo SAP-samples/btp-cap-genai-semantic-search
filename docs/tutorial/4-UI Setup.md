@@ -1,5 +1,5 @@
 **Prerequisites:** 
-Make sure you have [Node.js](https://nodejs.org/) (v14+ recommended) installed.
+Make sure you have [Node.js](https://nodejs.org/) (v21+ recommended) installed.
 
 **Setup and Run the UI Locally:**
 1. Navigate to the `ui` folder.
@@ -14,11 +14,8 @@ Make sure you have [Node.js](https://nodejs.org/) (v14+ recommended) installed.
     ```bash
     cd .. && npm run watch
     ```
-4. Once the application is running, check the console output for a message indicating the port number the application is listening on. You should see a line similar to:
+4. Once the application has started, it will automatically open the correct URL in your browser:
     ```bash
-    Application router is listening on port: 5000#
+    http://localhost:5000/index.html
     ```
-    Replace `PORT` with the correct port number to access and test the application locally in the browser.
-    ```url
-    http://localhost:PORT
-    ```
+    This route is handled by the AppRouter, which performs authentication and proxies requests to the frontend (8080) and backend (4040) services accordingly.
