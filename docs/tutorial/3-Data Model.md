@@ -33,6 +33,10 @@ The schema in the `schema.cds` file should be updated. Deploying changes to the 
 ```bash
 # Navigate to the root folder and execute:
 npm run build:deploy
+
+# To deploy only the HDI container (e.g., after modifying data models or fields), without deploying services or UIs:
+cds deploy -2 <hdi-container-instance-name>:hdi-container-service
+
 ```
 ### Example Modifications
 
@@ -57,4 +61,4 @@ To modify the `Documents` entity in the `schema.cds` file, follow these examples
     }
     ```
   
-After making these changes, remember to redeploy the application to apply the modifications..
+After making these changes deploy the HDI container to apply the modifications.
