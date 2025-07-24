@@ -7,10 +7,11 @@
     "private": true,
     "scripts": {
         "--------DEVELOPMENT-------": "",
-        "watch": "npx --yes npm-run-all --npm-path npm --parallel watch:api router watch:ui",
+        "watch": "npx --yes npm-run-all --npm-path npm --parallel watch:api router watch:ui open:app",
         "watch:api": "npm run watch --prefix ./api",
         "router": "npm run start:local --prefix ./router",
         "watch:ui": "npm run start --prefix ./ui",
+        "open:app": "npx --yes open-cli http://localhost:5000/index.html",
         "--------BUILD & DEPLOY-------": "",
         "build": "mbt build -p=cf -t=./mta_archives --mtar=genai-semantic-search-sample_0.0.1.mtar",
         "deploy": "cf deploy mta_archives/genai-semantic-search-sample_0.0.1.mtar",
