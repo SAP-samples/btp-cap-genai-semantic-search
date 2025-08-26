@@ -76,6 +76,7 @@ const REFORMULATION_SCHEMA = z
     }).describe("Schema for reformulating a query");
 
 export default class SampleService extends cds.ApplicationService {
+    // Custom handler to use the embedding model from Azure Open AI
     private embedder = new AzureOpenAiEmbeddingClient({
         modelName: "text-embedding-3-small",
         resourceGroup: "default"
@@ -92,42 +93,48 @@ export default class SampleService extends cds.ApplicationService {
         const dataObj = JSON.parse(req.data.data);
         const { text, title, author, date, summary, category, tags, language, publication, rights, numberOfPages } = dataObj;
         const { Documents } = this.entities;
-        
+
         console.dir(Documents, { depth: null, maxArrayLength: null });
-        const embeddings = await this.embedder.run({input: text});
+
+        // --- Measure OpenAI embedding generation time ---
+        const startOpenAI = Date.now();
+        const embeddings = await this.embedder.run({ input: text });
         const embeddingArray: number[] = embeddings.getEmbedding();
+        const endOpenAI = Date.now();
+        console.log(`⏱️ OpenAI embedding generation took: ${endOpenAI - startOpenAI} ms`);
 
-        if (embeddingArray.length > 0) {
-            const generatedId = uuidv4();
+        const generatedId = uuidv4();
 
-            const query = `
-                INSERT INTO "SAMPLE_DB_DOCUMENTS"
-                ("ID", "TEXT", "TITLE", "AUTHOR", "DATE", "SUMMARY", "CATEGORY", "TAGS", "LANGUAGE", "PUBLICATION", "RIGHTS", "NUMBEROFPAGES", "EMBEDDING")
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, TO_REAL_VECTOR(?))
-                `;
+        // --- Measure insert time (includes HANA native embedding computation) ---
+        const startInsert = Date.now();
+        const query = `
+            INSERT INTO "SAMPLE_DB_DOCUMENTS"
+            ("ID", "TEXT", "TITLE", "AUTHOR", "DATE", "SUMMARY", "CATEGORY", "TAGS", "LANGUAGE", "PUBLICATION", "RIGHTS", "NUMBEROFPAGES", "EMBEDDING_OPENAI")
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, TO_REAL_VECTOR(?))
+        `;
 
-            const success = await cds.run(query, [
-                generatedId,
-                text,
-                title,
-                author,
-                date,
-                summary,
-                category,
-                JSON.stringify(tags),
-                language,
-                publication,
-                rights,
-                numberOfPages,
-                `[${embeddingArray.join(',')}]`
-            ]);
-            
-            if (success) {
-                return true;
-            }
-        }
-        return false;
+        const success = await cds.run(query, [
+            generatedId,
+            text,
+            title,
+            author,
+            date,
+            summary,
+            category,
+            JSON.stringify(tags),
+            language,
+            publication,
+            rights,
+            numberOfPages,
+            JSON.stringify(embeddingArray) // OpenAI embedding stored explicitly
+        ]);
+        const endInsert = Date.now();
+        console.log(`⏱️ Insert + HANA native embedding took: ${endInsert - startInsert} ms`);
+
+        // --- Final result ---
+        return !!success;
     };
+
 
     private onSearch = async (req: cds.Request): Promise<any> => {
         const { snippets } = req.data;
@@ -148,17 +155,18 @@ export default class SampleService extends cds.ApplicationService {
         console.log("Where Clause:", promptMetadata.whereClause);
         console.log("Is Where Clause Valid:", promptMetadata.validWhereClause)
 
-        if (embeddingArray.length > 0) {
+        //if (embeddingArray.length > 0) {
             const whereClause: string = promptMetadata.validWhereClause ? promptMetadata.whereClause : "";
             const query = `
-                SELECT ID, TEXT, TITLE, AUTHOR, DATE, SUMMARY, CATEGORY, TAGS, LANGUAGE, PUBLICATION, RIGHTS, NUMBEROFPAGES, COSINE_SIMILARITY(EMBEDDING, TO_REAL_VECTOR('[${embeddingArray.toString()}]')) as "similarity"
+                SELECT ID, TEXT, TITLE, AUTHOR, DATE, SUMMARY, CATEGORY, TAGS, LANGUAGE, PUBLICATION, RIGHTS, NUMBEROFPAGES,
+                COSINE_SIMILARITY(EMBEDDING, VECTOR_EMBEDDING(?, 'DOCUMENT', 'SAP_NEB.20240715')) AS "similarity"
                 FROM "SAMPLE_DB_DOCUMENTS"
                 ${whereClause} 
                 ORDER BY "similarity" DESC LIMIT ?
                 `;
 
             console.log("Executing query:", query);
-            const documents = await cds.run(query, [10]);
+            const documents = await cds.run(query, [textToUse, 10]);
             if (documents) {
                 const searchResults = documents.map((document: any) => ({
                     document: {
@@ -184,7 +192,7 @@ export default class SampleService extends cds.ApplicationService {
                 }
                 return response;
             }
-        }
+        //}
         return [];
     };
 
