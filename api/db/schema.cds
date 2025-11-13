@@ -14,6 +14,8 @@ context sample.db {
             publication : String(100);
             rights      : String(100);
             numberOfPages : Integer;
+
+            @cds.api.ignore
             embedding : Vector(1536);
       }
 }
